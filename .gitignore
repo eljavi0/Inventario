@@ -1,1 +1,67 @@
 .vs/
+# =========================
+# BUILD OUTPUTS
+# =========================
+bin/
+obj/
+out/
+
+# =========================
+# VISUAL STUDIO
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# RIDER / VS CODE (opcional)
+# =========================
+.idea/
+.vscode/
+
+# =========================
+# LOGS
+# =========================
+*.log
+
+# =========================
+# TEST RESULTS
+# =========================
+TestResults/
+*.trx
+
+# =========================
+# NUGET
+# =========================
+*.nupkg
+packages/
+.nuget/
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# COVERAGE / REPORTES
+# =========================
+coverage/
+*.coverage
+*.coveragexml
+
+# =========================
+# DOTNET
+# =========================
+*.runtimeconfig.dev.json
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# =========================
+# OTROS TEMPORALES
+# =========================
+*.tmp
+*.cache
