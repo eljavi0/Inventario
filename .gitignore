@@ -1,0 +1,69 @@
+# ============================================================
+#  .gitignore — Proyecto C# · Visual Studio · xUnit
+# ============================================================
+
+# ---------- Compilados y binarios ----------
+bin/
+obj/
+out/
+
+# ---------- Visual Studio ----------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# ---------- NuGet ----------
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+*.nuspec
+
+# ---------- Resultados de pruebas ----------
+TestResults/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+*.opencover.xml
+
+# ---------- ReSharper ----------
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
+
+# ---------- Rider ----------
+.idea/
+*.sln.iml
+
+# ---------- Archivos del SO ----------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ---------- Logs ----------
+*.log
+logs/
+
+# ---------- Variables de entorno ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Publicaciones ----------
+publish/
