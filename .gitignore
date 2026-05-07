@@ -1,67 +1,69 @@
-.vs/
-# =========================
-# BUILD OUTPUTS
-# =========================
+# ============================================================
+#  .gitignore — Proyecto C# · Visual Studio · xUnit
+# ============================================================
+
+# ---------- Compilados y binarios ----------
 bin/
 obj/
 out/
 
-# =========================
-# VISUAL STUDIO
-# =========================
+# ---------- Visual Studio ----------
 .vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.userprefs
 
-# =========================
-# RIDER / VS CODE (opcional)
-# =========================
-.idea/
-.vscode/
-
-# =========================
-# LOGS
-# =========================
-*.log
-
-# =========================
-# TEST RESULTS
-# =========================
-TestResults/
-*.trx
-
-# =========================
-# NUGET
-# =========================
+# ---------- NuGet ----------
 *.nupkg
-packages/
+*.snupkg
 .nuget/
+packages/
+project.lock.json
+project.assets.json
+*.nuspec
 
-# =========================
-# OS FILES
-# =========================
-.DS_Store
-Thumbs.db
-
-# =========================
-# COVERAGE / REPORTES
-# =========================
+# ---------- Resultados de pruebas ----------
+TestResults/
 coverage/
+*.trx
 *.coverage
 *.coveragexml
+*.opencover.xml
 
-# =========================
-# DOTNET
-# =========================
-*.runtimeconfig.dev.json
-project.lock.json
-project.fragment.lock.json
-artifacts/
+# ---------- ReSharper ----------
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
 
-# =========================
-# OTROS TEMPORALES
-# =========================
-*.tmp
-*.cache
+# ---------- Rider ----------
+.idea/
+*.sln.iml
+
+# ---------- Archivos del SO ----------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ---------- Logs ----------
+*.log
+logs/
+
+# ---------- Variables de entorno ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Publicaciones ----------
+publish/
