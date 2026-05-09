@@ -1,4 +1,5 @@
 using Xunit;
+using Inventario;
 namespace Inventario.Test
 {
     public class InventarioServicioTests
