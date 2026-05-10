@@ -20,11 +20,15 @@
 
         public void ActualizarCantidad(int id, int nuevaCantidad)
         {
-            var producto = _productos.FirstOrDefault(p => p.Id == id);
+            var producto = BuscarPorId(id);
             if (producto != null)
                 producto.Cantidad = nuevaCantidad;
         }
-        public Producto? ObtenerProducto(int id)
-        => _productos.FirstOrDefault(p => p.Id == id);
+
+        //refactorizar el método ObtenerProducto para reutilizar la lógica de búsqueda por id
+        private Producto? BuscarPorId(int id)
+    => _productos.FirstOrDefault(p => p.Id == id);
+
+        public Producto? ObtenerProducto(int id) => BuscarPorId(id);
     }
 }
