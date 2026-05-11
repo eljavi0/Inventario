@@ -27,14 +27,13 @@ namespace Inventario.Test
         }
 
         [Fact]
-        public void ObtenerProducto_ConIdInvalido_RetornaNull()
+        public void ObtenerProducto_ConIdInvalido_LanzaExcepcion()
         {
             var servicio = new InventarioServicio();
-
-            var resultado = servicio.ObtenerProducto(999);
-
-            Assert.Null(resultado);
+            Assert.Throws<KeyNotFoundException>(
+                () => servicio.ObtenerProducto(999));
         }
+
 
         [Fact]
         public void ListarProductos_DebeRetornarTodosLosProductos()

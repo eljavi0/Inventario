@@ -29,7 +29,16 @@
         private Producto? BuscarPorId(int id)
         => _productos.FirstOrDefault(p => p.Id == id);
 
-        public Producto? ObtenerProducto(int id) => BuscarPorId(id);
+
+        /// <summary>
+        /// Refactorizar el método ObtenerProducto para reutilizar la lógica
+        /// de búsqueda por id, utilizando el método BuscarPorId.
+        /// </summary>
+        public Producto ObtenerProducto(int id)
+        {
+            return BuscarPorId(id)
+                ?? throw new KeyNotFoundException($"Producto {id} no encontrado.");
+        }
 
 
 
