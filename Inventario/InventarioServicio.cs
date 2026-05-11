@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Inventario
+﻿﻿namespace Inventario
 {
     public class InventarioServicio
     {
@@ -23,5 +17,18 @@ namespace Inventario
         }
 
         public int ContarProductos() => _productos.Count;
+
+        public void ActualizarCantidad(int id, int nuevaCantidad)
+        {
+            var producto = BuscarPorId(id);
+            if (producto != null)
+                producto.Cantidad = nuevaCantidad;
+        }
+
+        //refactorizar el método ObtenerProducto para reutilizar la lógica de búsqueda por id
+        private Producto? BuscarPorId(int id)
+    => _productos.FirstOrDefault(p => p.Id == id);
+
+        public Producto? ObtenerProducto(int id) => BuscarPorId(id);
     }
 }
